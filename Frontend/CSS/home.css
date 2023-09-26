@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200&family=Inter:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200&display=swap');
+
+/*import Tailwind แต่ยังใช้ไม่เป็น*/
+/*@import 'tailwindcss/base';*/
+/*@import 'tailwindcss/components';*/
+/*@import 'tailwindcss/utilities';*/
+
+
 *{
     margin: 0;
     padding: 0;
@@ -8,19 +15,19 @@
     font-family: 'Inter', sans-serif, 'IBM Plex Sans Thai', sans-serif;
 }
 
-
 body{
     background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_2560,w_4096,c_fit,f_auto,q_auto:best/Homepage-Model-3-Desktop-RHD');
     background-size: cover;
     background-repeat: no-repeat;
-
+    background-position: top;
 }
+
 section {
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -31,33 +38,62 @@ section {
     margin: auto;
     display: flex;
     flex-direction: row;
-    width: 650px;
-    height: max-content;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0);
 }
 
 
 .box{
-    margin: 20px auto;
-    padding: 10px;
+    margin: 0px auto 0px;
+    height: 100%;
 }
 
-.column-container {
+.column-pageContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 3em;
+
+}
+
+.column-pageBox {
+    margin: 0px;
+    width: max-content;
+    height: fit-content;
+    top: 0px;
+}
+.column-pageBox h1{
+    font-size: 0.9em;
+}
+
+
+.column-buttonContainer {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 40px;
 }
-.column-inputBox{
+
+.column-buttonBox{
     margin: 10px 0px;
     width: 250px;
     height: fit-content;
 }
 
-.column-inputBox label{
+.column-buttonBox button{
+    width: 100%;
+    height: 37px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    background: #000;
+}
+
+.column-buttonBox label{
     font-size: 0.9em;
 }
-.column-inputBox input {
+.column-buttonBox input {
     margin-top: 0px;
     width: 100%;
     height: 25px;
@@ -69,7 +105,7 @@ section {
     text-indent: 0;
 }
 
-.column-inputBox input:hover{
+.column-buttonBox input:hover{
     border-bottom: solid black 1.2px;
 }
 
@@ -114,8 +150,8 @@ input, select {
 
 .box .title h2{
     text-align: center;
-    font-size: 1em;
-    margin: 10px;
+    font-size: 2.5em;
+    margin: 50px;
 }
 
 .inputbox label, .inputbox textarea{
@@ -171,12 +207,3 @@ input::placeholder{
     margin-top: 15px;
 }
 
-button{
-    width: 160px;
-    height: 35px;
-    padding: 5px;
-    border-radius: 25px;
-
-    background: none;
-    border: 2px solid #000;
-}
