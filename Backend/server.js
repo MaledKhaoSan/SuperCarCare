@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const app = express();
 const port = process.env.PORT || 3001;
-
+ 
 app.use(express.json()); // Add this line to parse JSON data in the request body
 
 // Add this middleware to enable CORS
